@@ -12,6 +12,6 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
-          java-version: ${{ JAVA_VERSION }}
+          java-version: ${{ env.JAVA_VERSION }}
       - name: Run Tests
         run: gradle test
