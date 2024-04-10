@@ -33,14 +33,9 @@ public class PrimeGeneratorTests {
 
     @Test
     public void primeGeneratorWithInputGreaterThanOrEqualTo4() {
-        final var input = 5;
-        final var expectation = new Integer[]{1, 2, 3, 5};
+        final var input = 20;
+        final var expectation = new Integer[]{1, 2, 3, 5, 7, 11, 13, 17, 19};
         final var result = primeGenerator.getNPrimes(input);
         Assertions.assertArrayEquals(expectation, result);
-//        for (int i : result) {
-//            for (int j = 3; j <= i; j++) {
-//                assert i % j != 0;
-//            }
-//        }
     }
 }

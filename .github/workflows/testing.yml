@@ -1,0 +1,17 @@
+name: Unit Testing
+on:
+  push:
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    env:
+      JAVA_VERSION: 11
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: ${{ JAVA_VERSION }}
+      - name: Run Tests
+        run: gradle test
